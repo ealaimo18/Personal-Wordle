@@ -1,0 +1,41 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+td{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: white;
+  font-variant-caps: small-caps;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.HIT {
+  background-color: lightgreen;
+}
+
+.CLOSE{
+  background-color: yellow;
+}
+
+.MISS{
+  background-color: lightgray;
+}
+
+.enter{
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  background-color: gray;
+}
+
+.enter:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}

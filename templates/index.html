@@ -1,0 +1,33 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="/static/style.css" rel="stylesheet" 
+      type="text/css" />
+</head>
+<body> 
+  <h1>GWordle!</h1>
+  <!-- Display guesses and results here -->
+
+  <table>
+      {% for i in range(0, guesses|length): %}
+        <tr>
+        {% for j in range(0, guesses[i]|length) %}
+          <td class = {{results[i][j]}}> {{guesses[i][j]}} </td>
+        {% endfor %}
+        </tr>
+      {% endfor %}
+  </table>
+
+  <form action="/" method="POST">
+    <label for="guess">Guess Word Here:</label>
+    <input type="text" name="guess" placeholder="enter guess" minlength="5" required maxlength="5" required>
+    <input class="enter" type="submit" value="enter" {% if session['guesses']|length >= 6: %} disabled {% endif %}>
+  </form>
+  <form action="/reset" method="POST">
+    <input class="enter" type="submit" value="reset">
+  </form>
+    
+    
+</body>
+</html>
